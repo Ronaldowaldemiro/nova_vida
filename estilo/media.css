@@ -4,16 +4,42 @@
     body {
         background-image: linear-gradient(to right, #ff7e5f, #feb47b);
         font-family: Arial, Helvetica, sans-serif;
-        width: 100%;
+        width: 97%;
     } 
     
     header {
         border-radius: 10px;
     }
+
+    main {
+        border-radius: 10px;
+    }
+
+    main > h2 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    main > h3 {
+        padding: 10px;
+    }
     
     p {
+        padding: 10px;
+        text-align: justify;
         font-size: 1.2em;
     }
+
+    .imagem {
+        padding: 10px;
+        padding-left: 38px;
+        margin: auto;
+    }
+
+    #img2 {
+       margin: auto;
+    } 
+    
 }
 
 @media screen and (min-width: 591px) and (max-width: 890px) {
