@@ -19,6 +19,7 @@
     width: 200px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
+    border-radius: 15px;
     padding: 10px;
 }
   
@@ -52,11 +53,11 @@
   
 .menu-options a {
     text-decoration: none;
-    color: #333;
+    color: #d61616;
 }
   
 .menu-options a:hover {
-    color: #666;
+    color: #30f160;
 }
 
 body {

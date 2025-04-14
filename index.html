@@ -10,37 +10,44 @@
     <link rel="stylesheet" href="estilo/media.css" >
 </head>
 <body>
-    <div class="menu">
-        <div class="menu-header">
-          <span>Menu</span>
-          <button class="menu-toggle">
-            <i class="fas fa-angle-down"></i>
-          </button>
-        </div>
-        <ul class="menu-options">
-          <li><a href="#">Opção 1</a></li>
-          <li><a href="#">Opção 2</a></li>
-          <li><a href="#">Opção 3</a></li>
-        </ul>
-    </div>
   
     <header>
-       
+        <div class="menu">
+            <div class="menu-header">
+              <span>Nossas redes sociais</span>
+              <button class="menu-toggle">+</button>
+            </div>
+            <ul class="menu-options" style="display: none;">
+              <li><a href="https://www.instagram.com/novavidabarradopirai/" target="_blank">Instagran</a></li>
+              <li><a href="https://www.facebook.com/novavidabp/" target="_blank">Facebook</a></li>
+            </ul>
+          </div>
         <!-- <div class="logo">
             <img src="imagens/logo.png" alt="Logo Nova Vida" class="logo-img">
         </div> -->
-        <nav>
-            <!-- <a href="#">Mais sobre nós</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">whatsApp</a></li>
-                <li><a class="dropdown-item" href="#">Instagran</a></li>
-                <li><a class="dropdown-item" href="#">Youtube</a></li>
-            </ul>   -->
-        </nav>
     </header>
     
     <main>
-        
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea laudantium, explicabo, inventore quos deserunt voluptate magnam consequatur quidem quibusdam maxime omnis fuga iste nostrum possimus harum quasi, repellat porro. Vel.
+        Omnis non pariatur repudiandae dolorem ut maxime totam consequatur asperiores. Ut nisi rerum temporibus quos. Eveniet eligendi dolore ullam reiciendis obcaecati exercitationem, pariatur animi nam laborum, dignissimos, illum magnam omnis.
+        Debitis enim, sapiente accusamus quisquam sint asperiores totam necessitatibus labore! Quasi enim saepe illum sit aliquid quibusdam, ducimus provident sapiente obcaecati? Dolores facere quo repellendus pariatur ut amet repudiandae nihil.
+        Error consequatur reprehenderit ad laboriosam corrupti libero, quasi nam rem debitis assumenda quo ipsa officia vero veritatis minus accusantium est reiciendis facilis illo blanditiis doloribus a exercitationem sit commodi. Praesentium!
+        Maxime, error rem veritatis, minima qui ea, magnam accusamus fugiat ipsam mollitia totam beatae illo distinctio nemo laborum iure. Veritatis assumenda neque rerum enim eaque quam minus rem magni fugit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, repudiandae iusto ullam earum expedita voluptatum, inventore, corporis dignissimos facilis beatae voluptas voluptates? Esse explicabo odit sequi possimus, similique consequuntur odio? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat iure commodi explicabo cupiditate dignissimos incidunt asperiores, voluptatibus doloremque ab sed rerum modi totam molestias possimus officia minima in exercitationem! Ratione?</p>
+
+        <picture>
+            <source srcset="imagens/pastor_pq.jpg" media="(max-width: 600px)">
+            <source srcset="imagens/nova_vida_pq.jpg" media="(max-width: 590px)">
+            <img src="imagem-grande.jpg" alt="Imagem">
+          </picture>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea laudantium, explicabo, inventore quos deserunt voluptate magnam consequatur quidem quibusdam maxime omnis fuga iste nostrum possimus harum quasi, repellat porro. Vel.
+        Omnis non pariatur repudiandae dolorem ut maxime totam consequatur asperiores. Ut nisi rerum temporibus quos. Eveniet eligendi dolore ullam reiciendis obcaecati exercitationem, pariatur animi nam laborum, dignissimos, illum magnam omnis.
+        Debitis enim, sapiente accusamus quisquam sint asperiores totam necessitatibus labore! Quasi enim saepe illum sit aliquid quibusdam, ducimus provident sapiente obcaecati? Dolores facere quo repellendus pariatur ut amet repudiandae nihil.
+        Error consequatur reprehenderit ad laboriosam corrupti libero, quasi nam rem debitis assumenda quo ipsa officia vero veritatis minus accusantium est reiciendis facilis illo blanditiis doloribus a exercitationem sit commodi. Praesentium!
+        Maxime, error rem veritatis, minima qui ea, magnam accusamus fugiat ipsam mollitia totam beatae illo distinctio nemo laborum iure. Veritatis assumenda neque rerum enim eaque quam minus rem magni fugit.</p>
+
+        <img src="imagens/nova_vida.jpg" alt="Imagem da Logo Nova Vida">
     </main>
     <footer>
 
@@ -50,9 +57,13 @@
         const menuOptions = document.querySelector('.menu-options');
 
         menuToggle.addEventListener('click', () => {
-        menuOptions.style.display = menuOptions.style.display === 'block' ? 'none' : 'block';
-        menuToggle.querySelector('i').classList.toggle('fa-angle-down');
-        menuToggle.querySelector('i').classList.toggle('fa-angle-up');
+            if (menuOptions.style.display === 'block') {
+            menuOptions.style.display = 'none';
+            menuToggle.textContent = '+';
+            } else {
+            menuOptions.style.display = 'block';
+            menuToggle.textContent = '-';
+            }
         });
         // Adiciona um evento de clique fora do menu para fechá-lo
         document.addEventListener('click', (event) => {
